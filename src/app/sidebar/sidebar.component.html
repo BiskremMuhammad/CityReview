@@ -1,0 +1,14 @@
+<nav>
+  <ul>
+    <li *ngFor="let message of messages$">
+      <a class="{{ message.sentiment.toLowerCase() }}" [class.activated]="currentUrl == message.city" routerLink="{{ message.city }}" >
+          <span class="date">{{ message.date }}</span>
+        <span class="message">{{ message.message }}</span>
+        <span class="meta">
+            <span class="city"><i class="fas fa-map-marker-alt"></i> {{ message.city }}</span>
+          <span class="sentiment">{{ message.sentiment }}</span>
+        </span>
+      </a>
+    </li>
+  </ul>
+</nav>

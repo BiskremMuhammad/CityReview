@@ -1,0 +1,101 @@
+nav{
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    border-right: 1px solid #e7e7e7;
+    box-shadow: 3px 0 3px rgba(0,0,0,0.08);
+}
+ul {
+    width: 100%;
+    list-style: none;
+}
+a {
+    cursor: pointer;
+    width: 100%;
+    padding: 24px 48px;
+    border-left: 4px solid transparent;
+    transition: all 0.3s;
+    display: block;
+    border-bottom: 1px solid #e7e7e7;
+    position: relative;
+    text-decoration: none;
+    color: #000;
+} 
+a:visited, a span {
+    text-decoration: none;
+}
+a > * {
+    direction: ltr;
+}
+a:hover { 
+    padding-top: 22px;
+    padding-bottom: 26px;
+    padding-left: 56px;
+    padding-right: 32px;
+}
+a:after {
+    background: #fff;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 16px;
+    top: -1px;
+    right: -15px;
+    box-shadow: 2px 3px 5px rgba(0,0,0,0.1);
+    border-radius: 0 4px 4px 0;
+    border: 1px solid #e7e7e7;
+    border-left: 0;
+    display: none;
+    transition: all 0.3s;
+    z-index: 9999;
+}
+a.activated:after {
+    display: block;
+}
+a.positive.selected, a.positive:hover{
+    border-left-color: #41AF4B;
+}
+
+a.negative.selected, a.negative:hover {
+    border-left-color: #F75755;
+}
+
+a span.message {
+    font-weight: bold;
+    font-size: 14px;
+    width: 100%;
+    text-align: left;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+a span.meta {
+    display: flex;
+}
+
+a span.meta > span{
+    font-size: 12px;
+    font-style: italic;
+    flex: 1;
+}
+
+a span.date {
+    font-size: 12px;
+    font-style: italic;
+    color: #999;
+}
+a span.city {
+    
+}
+ a span.sentiment {
+     color: #999;
+     text-align: right;
+ }
+
+ a.positive span.sentiment {
+    color: #41AF4B;
+ }
+
+ a.negative span.sentiment {
+    color: #F75755 ;
+ }

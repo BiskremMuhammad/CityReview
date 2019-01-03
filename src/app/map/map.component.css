@@ -1,0 +1,6 @@
+iframe {
+    width: calc(100% - 360px);
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+}
