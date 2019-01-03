@@ -13,7 +13,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "./dist/city-review",
+            "outputPath": "dist/city-review",
+            "baseHref" : "/work/city-review/",
+            "deployUrl": "/work/city-review/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
